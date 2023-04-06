@@ -13,6 +13,7 @@ class Item < ApplicationRecord
   validates :title, presence: true, allow_blank: false
   validates :description, presence: true, allow_blank: false
   validates :slug, uniqueness: true, exclusion: { in: ['feed'] }
+  validates :image, presence: true, allow_blank: false
 
   before_validation do
     self.slug ||= "#{title.to_s.parameterize}-#{rand(36**6).to_s(36)}"
