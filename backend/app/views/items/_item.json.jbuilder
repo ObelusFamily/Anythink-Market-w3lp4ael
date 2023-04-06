@@ -1,10 +1,6 @@
 # frozen_string_literal: true
 
-if item.image.present?
-    json.call(item, :title, :slug, :description, :image)
-elsegit 
-    json.call(item, :title, :slug, :description)
-end
+json.call(item, :title, :slug, :description, :image)
 json.createdAt item.created_at
 json.updatedAt item.updated_at
 json.tagList item.tag_list
