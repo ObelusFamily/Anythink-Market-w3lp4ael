@@ -40,6 +40,9 @@ gem 'jwt'
 gem "acts_as_follower", github: "tcocca/acts_as_follower"
 gem 'pg'
 
+# use Open AI to generate an image for items created withotu images
+gem 'ruby-openai'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
